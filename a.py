@@ -17,7 +17,9 @@ def maxTime(fs):
                     st = row[1];
                     ed = row[2];
                     m = (math.floor(b / 100) - math.floor(a / 100) - 1) * 60 + (60 - (a % 100)) + (b % 100) 
-        if mc == -math.inf:
+        if mc == -math.inf or mc <= 0:
             return None
         else:
             return (st, m)
+
+print(maxTime('test6.csv'))
