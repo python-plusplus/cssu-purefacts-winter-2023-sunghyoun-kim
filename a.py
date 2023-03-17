@@ -17,9 +17,7 @@ def maxTime(fs):
                     st = row[1];
                     ed = row[2];
                     m = (math.floor(b / 100) - math.floor(a / 100) - 1) * 60 + (60 - (a % 100)) + (b % 100) 
-                    print(60 - (a  % 100))
         if mc == -math.inf:
             return None
         else:
-            return (st, ed, m)
-
+            return (st, m)
