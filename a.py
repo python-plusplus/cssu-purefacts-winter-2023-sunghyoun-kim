@@ -22,4 +22,3 @@ def maxTime(fs):
         else:
             return (st, m)
 
-print(maxTime('test6.csv'))
