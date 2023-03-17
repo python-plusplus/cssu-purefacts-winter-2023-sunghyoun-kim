@@ -12,7 +12,7 @@ def maxTime(fs):
             if row[1] != "StartTime":
                 a = int(row[1].replace(':', '')) 
                 b = int(row[2].replace(':', ''))
-                if a > 900 and a < 1700 and b > 900 and b < 1700:
+                if a >= 900 and a <= 1700 and b >= 900 and b <= 1700:
                     mc = max(b - a, mc);
                     st = row[1];
                     ed = row[2];
