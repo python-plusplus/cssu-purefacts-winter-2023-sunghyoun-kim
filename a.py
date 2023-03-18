@@ -12,8 +12,8 @@ def maxTime(fs):
             if row[1] != "StartTime":
                 a = int(row[1].replace(':', '')) 
                 b = int(row[2].replace(':', ''))
-                if a >= 900 and a <= 1700 and b >= 900 and b <= 1700:
-                    mc = max(b - a, mc);
+                if a >= 900 and a <= 1700 and b >= 900 and b <= 1700 and mc <= b-a:
+                    mc = b-a
                     st = row[1];
                     ed = row[2];
                     m = (math.floor(b / 100) - math.floor(a / 100) - 1) * 60 + (60 - (a % 100)) + (b % 100) 
@@ -21,4 +21,3 @@ def maxTime(fs):
             return None
         else:
             return (st, m)
-
